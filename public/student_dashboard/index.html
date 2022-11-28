@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <script type="module" src="index.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="nav">
+        <h1>STUDENT PORTAL</h1>
+        <button id="logout">LOGOUT</button>
+    </div>
+    <div class="container">
+        <div class="marks-container">
+            <div>Marks: </div>
+            <div id="mark-table"></div>
+            <div class="mark-chart">
+                <div style="width: 500px;height:500px;"><canvas id="mark-chart"></canvas></div>
+            </div>
+        </div>
+        <div class="attendance-container">
+            <div>Attendance: </div>
+            <div id="attendance-table"></div>
+            <div style="width: 500px;height:500px;"><canvas id="attendance-chart"></canvas></div>
+        </div>
+    </div>
+
+    <div class="input-container">
+        <div>Apply for a course!</div>
+        <input type="text" name="course_id" id="course-inp">
+        <button id="add">ADD</button>
+    </div>
+    <div class="input-container-2">
+        <div>Drop a course!</div>
+        <input type="text" name="course_id" id="course-inp-drop">
+        <button id="drop">DROP</button>
+    </div>
+</body>
+</html>
