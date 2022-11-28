@@ -1,5 +1,7 @@
 # DBMS_PROJECT
 
+NOTE: Guys, you can import the class Services from services.js and use its functions to communicate with the server  
+
 Schema:
 
 1. user:  
