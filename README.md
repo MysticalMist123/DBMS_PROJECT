@@ -27,7 +27,8 @@ Schema:
    ct1_weight int  
    ct2_total int  
    ct2_weight int  
-   endsem_total int  
+   endsem_total int
+   endsem_weight int
    assign1_total int  
    assign1_weight int  
    assign2_total int  
