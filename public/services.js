@@ -5,6 +5,7 @@ let insert_ep = 'http://localhost:3000/insert'
 let del_ep = 'http://localhost:3000/delete'
 let upd_ep = 'http://localhost:3000/update'
 let exec_ep = 'http://localhost:3000/exec'
+// let load_ep = 'http://localhost:3000/'
 
 export class Services{
     current_date(){
@@ -21,6 +22,13 @@ export class Services{
     //     fetch(getAll_ep).then((res)=>res.json()).then((data)=>(
     //         console.log(data)
     //     ))
+    // }
+
+    // async load(page_name){
+    //     console.log("loading "+page_name)
+    //     /* fetch(load_ep+page_name,{
+
+    //     })*/
     // }
 
     async insert(table_name,insert_values){
@@ -75,7 +83,7 @@ export class Services{
 
     async exec(sql_statement){
         return new Promise(function(resolve,reject){
-        console.log(`executing ${sql_statement}`)
+        // console.log(`executing ${sql_statement}`)
         fetch(exec_ep,{
             method:'POST',
             body: JSON.stringify({
