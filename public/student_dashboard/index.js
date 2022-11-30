@@ -185,5 +185,5 @@ drop_button.addEventListener('click',(e)=>{
 
 logout_button.addEventListener('click',(e)=>{
     sessionStorage.clear()
-    window.location.replace("../login_page/index.html")
+    window.location.replace("./login")
 })
