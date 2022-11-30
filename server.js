@@ -11,7 +11,7 @@ const port = 3000
 let con = sql.createConnection({
   host: "localhost",
   user: "root",
-  password: "password"
+  password: "Stkl@1210"
 })
 
 let use = 'use dbms_project;'
@@ -29,25 +29,31 @@ app.post('/insert',(req,res)=>{
   insert(req.body['table_name'],req.body['insert_values'])
   res.send('DONE insertion!')
 })
-
 app.post('/delete',(req,res)=>{
   del(req.body['table_name'],req.body['del_keys'])
   res.send('DONE deletion!')
 })
-
 app.post('/update',(req,res)=>{
   update(req.body['table_name'],req.body['col'],req.body['new_val'],req.body['identifiers'])
   res.send('DONE updating')
 })
-
 app.post('/exec',(req,res)=>{
   exec(req.body['sql']).then((result)=>{res.send(result)})
 })
 
+
 app.get( '/student', (req,res)=>{
   res.sendFile(__dirname + "/public/student_dashboard/index.html");
 })
-
+app.get('/login',(req,res)=>{
+  res.sendFile(__dirname + "/public/login_page/index.html")
+})
+app.get('/prof',(req,res)=>{
+  res.sendFile(__dirname+"/public/prof_dashboard/index.html")
+})
+app.get('/register',(req,res)=>{
+  res.sendFile(__dirname+"/public/register_page/index.html")
+})
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
