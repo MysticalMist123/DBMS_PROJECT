@@ -1,5 +1,6 @@
 //------------------------------------------------INITIAL CONFIGS-------------------------------------------------------------
 const express = require('express')
+const path = require('path')
 const sql = require('mysql')
 const cors = require('cors')
 const app = express()
@@ -10,10 +11,11 @@ const port = 3000
 let con = sql.createConnection({
   host: "localhost",
   user: "root",
-  password: "Stkl@1210"
+  password: "password"
 })
 
 let use = 'use dbms_project;'
+app.use(express.static(path.join(__dirname, '/public')))
 
 //--------------------------------------------------EVENT AND REQUEST HANDLING-------------------------------------------------
 app.use(cors({origin:'*'}))
@@ -22,21 +24,31 @@ app.use(express.json())
 // app.get('/getAll',(req,res)=>{
 //   showAll().then((result)=>{res.send(result)})
 // })
+
 app.post('/insert',(req,res)=>{
   insert(req.body['table_name'],req.body['insert_values'])
   res.send('DONE insertion!')
 })
+
 app.post('/delete',(req,res)=>{
   del(req.body['table_name'],req.body['del_keys'])
   res.send('DONE deletion!')
 })
+
 app.post('/update',(req,res)=>{
   update(req.body['table_name'],req.body['col'],req.body['new_val'],req.body['identifiers'])
   res.send('DONE updating')
 })
+
 app.post('/exec',(req,res)=>{
   exec(req.body['sql']).then((result)=>{res.send(result)})
 })
+
+app.get( '/student', (req,res)=>{
+  res.sendFile(__dirname + "/public/student_dashboard/index.html");
+})
+
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })

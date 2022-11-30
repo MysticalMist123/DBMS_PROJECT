@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mysql": "^2.18.1"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "dbms_project",
+  "description": "NOTE: Guys, you can import the class Services from services.js and use its functions to communicate with the server",
+  "version": "1.0.0",
+  "main": "server.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MysticalMist123/DBMS_PROJECT.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MysticalMist123/DBMS_PROJECT/issues"
+  },
+  "homepage": "https://github.com/MysticalMist123/DBMS_PROJECT#readme"
+}
