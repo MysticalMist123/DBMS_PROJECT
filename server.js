@@ -48,6 +48,9 @@ app.get( '/student', (req,res)=>{
   res.sendFile(__dirname + "/public/student_dashboard/index.html");
 })
 
+app.get( '/register', (req,res)=>{
+  res.sendFile(__dirname + "/public/register_page/index.html");
+})
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
