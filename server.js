@@ -3,8 +3,10 @@ const express = require('express')
 const path = require('path')
 const sql = require('mysql')
 const cors = require('cors')
+const { read } = require('fs')
 const app = express()
 const port = 3000
+const fetch = require('node-fetch')
 
 // NOTE: use your sql credentials here
 // NOTE: turn the server on, using "node server.js" on your terminal
@@ -20,6 +22,7 @@ app.use(express.static(path.join(__dirname, '/public')))
 //--------------------------------------------------EVENT AND REQUEST HANDLING-------------------------------------------------
 app.use(cors({origin:'*'}))
 app.use(express.json())
+app.use(express.urlencoded({ extended : true }));
 
 // app.get('/getAll',(req,res)=>{
 //   showAll().then((result)=>{res.send(result)})
@@ -59,6 +62,24 @@ app.get('/register',(req,res)=>{
 })
 app.get( '/register', (req,res)=>{
   res.sendFile(__dirname + "/public/register_page/index.html");
+})
+
+app.post('/registersubmit', (req, res) => {
+  fetch('http://localhost:3000/insert',{
+    method: 'POST',
+    body: JSON.stringify({
+        table_name : 'user',
+        insert_values : [
+          res.req.body.roll_number,
+          res.req.body['psw'],
+          res.req.body['name'],
+          res.req.body['designation']
+        ]
+    }),
+    headers: {
+        'Content-type':'application/json; charset=UTF-8'
+    }
+  })
 })
 
 app.listen(port, () => {
