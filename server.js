@@ -11,7 +11,7 @@ const port = 3000
 let con = sql.createConnection({
   host: "localhost",
   user: "root",
-  password: "Stkl@1210"
+  password: "password"
 })
 
 let use = 'use dbms_project;'
@@ -41,6 +41,9 @@ app.post('/exec',(req,res)=>{
   exec(req.body['sql']).then((result)=>{res.send(result)})
 })
 
+app.get('/favicon.ico', (req,res)=> {
+  res.sendFile(__dirname, "public/favicon.ico");
+})
 
 app.get( '/student', (req,res)=>{
   res.sendFile(__dirname + "/public/student_dashboard/index.html");
@@ -143,7 +146,10 @@ function exec(sql_statement){ //returns promise
   return new Promise(function(resolve,reject){
     query = sql_statement
     con.query(use,(err,result)=>{
-      if(err) throw err
+      if(err) {
+        console.log('err')
+        throw err;
+      }
       console.log("using database....")
       con.query(query,(err,result,fields)=>{
         if(err) reject(new Error(err))
