@@ -3,7 +3,7 @@
 import {Services} from '../services.js'
 let s = new Services
 
-const proll_no = '106120000'
+const proll_no = sessionStorage.getItem('roll_no')//'106120000'
 const sroll_no = document.getElementById('roll_no')
 const cid = document.getElementById('course_id')
 const enter_button = document.getElementById('get_info_button')
@@ -58,4 +58,11 @@ save_button.addEventListener('click',(e)=>{
     s.exec(`update stu_course set assign2_score = ${ass2_score} where roll_no = '${sroll_no.value}' and course_id = '${cid.value}'`)
     s.exec(`update stu_course set endsem_score = ${endsem_score} where roll_no = '${sroll_no.value}' and course_id = '${cid.value}'`)
     s.exec(`update stu_course set no_of_presents = ${pre_days} where roll_no = '${sroll_no.value}' and course_id = '${cid.value}'`)
+
+    alert('Changes saved!')
+})
+
+document.getElementById('logout').addEventListener('click',(e)=>{
+    sessionStorage.clear()
+    window.location.replace('./login')
 })
