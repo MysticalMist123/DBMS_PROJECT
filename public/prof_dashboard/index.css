@@ -5,11 +5,11 @@
 
 #details{
     width: 500px;
-    height: 250px;
+    height: 300px;
     border-width: 2px;
     border-color: black;
     border-style: groove;
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: space-between;
     /* display: none; */
