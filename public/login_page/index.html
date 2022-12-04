@@ -4,17 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="login_page/index.css">
-    <script type="module" src="login_page/index.js" defer></script>
-    <title>Document</title>
+    <title>Login</title>
+    <script type="module" src="/login_page/index.js"></script>
 </head>
 <body>
-    <h1>LOGIN</h1>
-    <form>
-        <label>ROLL NO:</label>
-        <input type="text" id="rno" name="rno">
-        <label for="fname">First name:</label><br>
-        <input type="text" id="fname" name="fname">
-    </form>
+    <form onsubmit="return false;" style="border:1px solid #ccc">
+        <div class="container">
+            <h1>Log In</h1>
+        <hr>
+        <label for="roll-number"><b>Roll number</b></label>
+        <input  type="text" placeholder="Enter roll number" id="roll-number" name="roll_number" required minlength="1">
+
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" id="psw" name="psw" required minlength="1">
+        
+    <div class="clearfix">
+        <button type="submit" id="signupbtn">Sign Up</button>
+    </div>
+</div>
+</form> 
 </body>
 </html>
