@@ -13,7 +13,7 @@ const fetch = require('node-fetch')
 let con = sql.createConnection({
   host: "localhost",
   user: "root",
-  password: "password"
+  password: "Stkl@1210"
 })
 
 let use = 'use dbms_project;'
