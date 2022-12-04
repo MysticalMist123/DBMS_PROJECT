@@ -17,7 +17,7 @@ let chart_exist2 = null
 
 //----------------------------------------MAIN STUFF------------------------------------------------------
 
-let ROLL_NO = sessionStorage.getItem('roll_no')//'106120127'
+let ROLL_NO = sessionStorage.getItem('roll_no')
 
 
 let MARK_TABLE_QUERY = `SELECT * FROM stu_course,course_details where stu_course.course_id = course_details.course_id and roll_no = '${ROLL_NO}'`
@@ -73,8 +73,9 @@ function displayMarkTable(data){
                 chart_exist1.destroy()
             }
 
+            document.getElementById('mark_chart_container').style.display = 'block'
             let row = document.getElementsByClassName('choice1')[i].innerText.split("\t")
-            console.log(row)
+            // console.log(row)
             draw_graph(['Marks','No marks'],[row[6],row[7]-row[6]],'Marks',markChart)
         })
     }
@@ -124,6 +125,7 @@ function displayAttendanceTable(data){
                 chart_exist2.destroy()
             }
 
+            document.getElementById('attend_chart_container').style.display = 'block'
             let row = document.getElementsByClassName('choice2')[i].innerText.split("\t")
             console.log(row)
             draw_graph(['Present','Absent'],[row[1],row[2]],'Attendance',attendanceChart)
