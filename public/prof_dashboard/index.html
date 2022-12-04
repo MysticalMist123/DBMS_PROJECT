@@ -10,19 +10,20 @@
 </head>
 <body>
     <div id="nav">
-        <h1>PROFESSOR PORTAL</h1>
+        <h1 id="title">PROFESSOR PORTAL</h1>
         <button id="logout">LOGOUT</button>
     </div>
     <br>
     <div id="body">
-        <div>
+        <div id="queries">
             <div>
-                <label>Student's roll no: </label>
+                <div class="labels">Student's roll no: </div>
+                <br>
                 <input type="text" name="roll_no" id="roll_no">
             </div>
-            <br>
             <div>
-                <label>Course ID: </label>
+                <div class="labels">Course ID: </div>
+                <br>
                 <input type="text" name="course_id" id="course_id">
             </div>
         </div>
@@ -32,48 +33,48 @@
         <br>
 
         <div id="details">
-            <h3>STUDENT DETAILS</h3>
+            <h3 style="margin-left: 10px;">STUDENT DETAILS</h3>
             <form class="fields">
                 <div id="f1ct1">
-                    <div>CT1 score: </div>
+                    <div class="report_field">CT1 score: </div>
                     <input type="number" name="ct1_score" id="ct1_score">
                 </div>
                 <div id="f1ct2">
-                    <div>CT2 score: </div>
+                    <div class="report_field">CT2 score: </div>
                     <input type="number" name="ct2_score" id="ct2_score">
                 </div>
             </form>
             <form class="fields">
                 <div id="f2ass1">
-                    <div>Assignment-1 score: </div>
+                    <div class="report_field">Assignment-1 score: </div>
                     <input type="number" name="ct1_score" id="ass1_score">
                 </div>
                 <div id="f2ass2">
-                    <div>Assignment-2 score: </div>
+                    <div class="report_field">Assignment-2 score: </div>
                     <input type="number" name="ct2_score" id="ass2_score">
                 </div>
             </form>
             <form class="fields">
                 <div id="f3endsem">
-                    <div>Endsem score: </div>
+                    <div class="report_field">Endsem score: </div>
                     <input type="number" name="ct1_score" id="endsem_score">
                 </div>
                 <div id="f3total">
-                    <div>Total: </div>
+                    <div class="report_field">Total: </div>
                     <input type="text" name="ct1_score" id="total_score" disabled>
                 </div>
             </form>
             <form class="fields">
                 <div id="f4present">
-                    <div>No. of days present: </div>
+                    <div class="report_field">No. of days present: </div>
                     <input type="number" name="ct1_score" id="pre_days" style="width: 100px;">
                 </div>
                 <div id="f4totaldays">
-                    <div>Total days: </div>
+                    <div class="report_field">Total days: </div>
                     <input type="number" name="ct1_score" id="tot_days" style="width: 100px;" disabled>
                 </div>
                 <div id="f4percent">
-                    <div>Attendance: </div>
+                    <div class="report_field">Attendance: </div>
                     <input type="text" name="ct1_score" id="attend" style="width: 100px;" disabled>
                 </div>
             </form>

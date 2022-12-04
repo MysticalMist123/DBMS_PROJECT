@@ -3,7 +3,7 @@
 import {Services} from '../services.js'
 let s = new Services
 
-const proll_no = '106120000'//sessionStorage.getItem('roll_no')
+const proll_no = sessionStorage.getItem('roll_no')
 const sroll_no = document.getElementById('roll_no')
 const cid = document.getElementById('course_id')
 const enter_button = document.getElementById('get_info_button')

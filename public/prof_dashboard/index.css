@@ -1,6 +1,66 @@
 *{
-    margin: 2px;
+    margin: 0px;
     padding: 0px;
+}
+
+body{
+    background: rgb(218, 218, 249);
+}
+
+#nav{
+    background: blue;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#title{
+    color: rgb(209, 214, 247);
+}
+
+#logout{
+    border-radius: 20px;
+    padding: 10px;
+    border-width: 5px;
+    border-color: rgb(209, 214, 247);
+    border-style: solid;
+    background: rgb(100, 100, 234);
+    color: rgb(240, 240, 244);
+    font-weight: bold;
+    width: 100px;
+    cursor: pointer;
+}
+
+#body{
+    margin-left: 20px;
+}
+
+.labels{
+    border: solid 2px;
+    width:fit-content;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 18px;
+    height: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    background: rgb(100, 100, 234);
+    color: white;
+}
+
+#queries{
+    display: flex;
+    width: 400px;
+    justify-content: space-between;
+}
+
+input{
+    background: none;
+    height: 20px;
+    border-radius: 5px;
 }
 
 #details{
@@ -12,21 +72,38 @@
     display: none;
     flex-direction: column;
     justify-content: space-between;
+    border-radius: 20px;
     /* display: none; */
 }
 
 .fields{
     display: flex;
     justify-content: space-between;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
-.f_col{
+/* .f_col{
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-}
+} */
 
 #save_stu_area{
     display: flex;
     justify-content: end;
+}
+
+#get_info_button,#save_stu_button{
+    border-radius: 20px;
+    padding: 5px;
+    border-width: 5px;
+    border-color: rgb(209, 214, 247);
+    border-style: solid;
+    background: rgb(100, 100, 234);
+    color: rgb(240, 240, 244);
+    /* font-weight: bold; */
+    /* width: 100px; */
+    cursor: pointer;
+    width: 70px;
 }
