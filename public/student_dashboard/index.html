@@ -11,33 +11,50 @@
 </head>
 <body>
     <div class="nav">
-        <h1>STUDENT PORTAL</h1>
-        <button id="logout">LOGOUT</button>
+        <h1 id="title">STUDENT PORTAL</h1>
+        <button id="logout">LOG OUT</button>
     </div>
+    <br>
+    <br>
     <div class="container">
         <div class="marks-container">
-            <div>Marks: </div>
-            <div id="mark-table"></div>
-            <div class="mark-chart">
-                <div style="width: 500px;height:500px;"><canvas id="mark-chart"></canvas></div>
+            <div class="details">
+                <div>
+                    <div class="labels">Marks </div>
+                    <br>
+                    <div id="mark-table"></div>
+                </div>
+                <div style="width: 300px;height:300px;" id="mark_chart_container"><canvas id="mark-chart"></canvas></div>
             </div>
         </div>
+        <br>
+        <br>
         <div class="attendance-container">
-            <div>Attendance: </div>
-            <div id="attendance-table"></div>
-            <div style="width: 500px;height:500px;"><canvas id="attendance-chart"></canvas></div>
+            <div class="details">
+                <div>
+                    <div class="labels">Attendance </div>
+                    <br>
+                    <div id="attendance-table"></div>
+                </div>
+                <div style="width: 300px;height:300px;" id="attend_chart_container"><canvas id="attendance-chart"></canvas></div>
+            </div>
         </div>
     </div>
-
-    <div class="input-container">
-        <div>Apply for a course!</div>
-        <input type="text" name="course_id" id="course-inp">
-        <button id="add">ADD</button>
-    </div>
-    <div class="input-container-2">
-        <div>Drop a course!</div>
-        <input type="text" name="course_id" id="course-inp-drop">
-        <button id="drop">DROP</button>
+    <br>
+    <br>
+    <div id="queries">
+        <div class="input-container">
+            <div class="labels">Apply for a course!</div>
+            <br>
+            <input type="text" name="course_id" id="course-inp">
+            <button id="add">ADD</button>
+        </div>
+        <div class="input-container-2">
+            <div class="labels">Drop a course!</div>
+            <br>
+            <input type="text" name="course_id" id="course-inp-drop">
+            <button id="drop">DROP</button>
+        </div>
     </div>
 </body>
 </html>
