@@ -10,7 +10,7 @@ if (DESIGNTION === "student") {
 }
 const sroll_no = document.getElementById('roll_no')
 const cid = document.getElementById('course_id')
-sconst enter_button = document.getElementById('get_info_button')
+const enter_button = document.getElementById('get_info_button')
 const save_button = document.getElementById('save_stu_button')
 const detail_box = document.getElementById('details')
 
