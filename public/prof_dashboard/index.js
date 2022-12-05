@@ -4,9 +4,13 @@ import {Services} from '../services.js'
 let s = new Services
 
 const proll_no = sessionStorage.getItem('roll_no')
+let DESIGNTION = sessionStorage.getItem('designation')
+if (DESIGNTION === "student") {
+    window.location.replace('./prof');
+}
 const sroll_no = document.getElementById('roll_no')
 const cid = document.getElementById('course_id')
-const enter_button = document.getElementById('get_info_button')
+sconst enter_button = document.getElementById('get_info_button')
 const save_button = document.getElementById('save_stu_button')
 const detail_box = document.getElementById('details')
 

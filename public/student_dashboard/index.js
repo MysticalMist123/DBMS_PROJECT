@@ -18,7 +18,10 @@ let chart_exist2 = null
 //----------------------------------------MAIN STUFF------------------------------------------------------
 
 let ROLL_NO = sessionStorage.getItem('roll_no')
-
+let DESIGNTION = sessionStorage.getItem('designation')
+if (DESIGNTION === "professor") {
+    window.location.replace('./prof');
+}
 
 let MARK_TABLE_QUERY = `SELECT * FROM stu_course,course_details where stu_course.course_id = course_details.course_id and roll_no = '${ROLL_NO}'`
 service.exec(MARK_TABLE_QUERY).then((data)=>{

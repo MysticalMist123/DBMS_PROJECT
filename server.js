@@ -12,7 +12,8 @@ const port = 3000
 let con = sql.createConnection({
   host: "localhost",
   user: "root",
-  password: "Stkl@1210"
+  password: "password"
+  // password: "Stkl@1210"
 })
 
 let use = 'use dbms_project;'
