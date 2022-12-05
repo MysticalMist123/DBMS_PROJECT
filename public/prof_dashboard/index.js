@@ -4,7 +4,7 @@ import {Services} from '../services.js'
 let s = new Services
 
 const proll_no = sessionStorage.getItem('roll_no')
-let DESIGNTION = sessionStorage.getIten('designation')
+let DESIGNTION = sessionStorage.getItem('designation')
 if (DESIGNTION === "student") {
     window.location.replace('./prof');
 }

@@ -14,7 +14,7 @@ function login(e) {
             const desig = data[0].designation;
             sessionStorage.setItem("roll_no", roll.value);
             sessionStorage.setItem("designation", desig);
-            if (desig == 'professor') {
+            if (desig == 'prof') {
                 window.location.replace('./prof');
             } else {
                 window.location.replace('./student');
