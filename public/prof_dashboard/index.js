@@ -4,13 +4,13 @@ import {Services} from '../services.js'
 let s = new Services
 
 const proll_no = sessionStorage.getItem('roll_no')
-let DESIGNTION = sessionStorage.getItem('designation')
+let DESIGNTION = sessionStorage.getIten('designation')
 if (DESIGNTION === "student") {
     window.location.replace('./prof');
 }
 const sroll_no = document.getElementById('roll_no')
 const cid = document.getElementById('course_id')
-sconst enter_button = document.getElementById('get_info_button')
+const enter_button = document.getElementById('get_info_button')
 const save_button = document.getElementById('save_stu_button')
 const detail_box = document.getElementById('details')
 
@@ -56,17 +56,12 @@ save_button.addEventListener('click',(e)=>{
     let endsem_score = document.getElementById('endsem_score').value
     let pre_days = document.getElementById('pre_days').value
 
-    s.exec(`update stu_course set ct1_score = ${ct1_score} where roll_no = '${sroll_no.value}' and course_id = '${cid.value}'`).then(()=>{
-        s.exec(`update stu_course set ct2_score = ${ct2_score} where roll_no = '${sroll_no.value}' and course_id = '${cid.value}'`).then(()=>{
-            s.exec(`update stu_course set assign1_score = ${ass1_score} where roll_no = '${sroll_no.value}' and course_id = '${cid.value}'`).then(()=>{
-                s.exec(`update stu_course set assign2_score = ${ass2_score} where roll_no = '${sroll_no.value}' and course_id = '${cid.value}'`).then(()=>{
-                    s.exec(`update stu_course set endsem_score = ${endsem_score} where roll_no = '${sroll_no.value}' and course_id = '${cid.value}'`).then(()=>{
-                        s.exec(`update stu_course set no_of_presents = ${pre_days} where roll_no = '${sroll_no.value}' and course_id = '${cid.value}'`)
-                    })
-                })
-            })
-        })
-    })
+    s.exec(`update stu_course set ct1_score = ${ct1_score} where roll_no = '${sroll_no.value}' and course_id = '${cid.value}'`)
+    s.exec(`update stu_course set ct2_score = ${ct2_score} where roll_no = '${sroll_no.value}' and course_id = '${cid.value}'`)
+    s.exec(`update stu_course set assign1_score = ${ass1_score} where roll_no = '${sroll_no.value}' and course_id = '${cid.value}'`)
+    s.exec(`update stu_course set assign2_score = ${ass2_score} where roll_no = '${sroll_no.value}' and course_id = '${cid.value}'`)
+    s.exec(`update stu_course set endsem_score = ${endsem_score} where roll_no = '${sroll_no.value}' and course_id = '${cid.value}'`)
+    s.exec(`update stu_course set no_of_presents = ${pre_days} where roll_no = '${sroll_no.value}' and course_id = '${cid.value}'`)
 
     alert('Changes saved!')
 })
