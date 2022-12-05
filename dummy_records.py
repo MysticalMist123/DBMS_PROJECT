@@ -4,7 +4,7 @@ from random import randint
 db = mysql.connect (
     host = "localhost",
     user = "root",
-    password = "password",
+    password = "Stkl@1210",
     database = "dbms_project"
 )
 
